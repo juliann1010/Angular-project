@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body">
+            <h3>{{ titulo }}</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary bg-secondary text-white" type="button" id="button-addon1" (click)="cambiarValor(-5)">-</button>
+                </div>
+                <input #txtProgreso type="number" class="form-control" [(ngModel)]="porcentaje" (ngModelChange)='onChanges($event)' name="inputValor">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-secondary text-white" type="button" id="button-addon2" (click)="cambiarValor(5)">+</button>
+                </div>
+            </div>
+    </div>
+</div>

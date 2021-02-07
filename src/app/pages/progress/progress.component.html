@@ -1,0 +1,21 @@
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Progress</h5>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje1 +'%'"></div>
+      </div>
+      <br>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje2 +'%'"></div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="col-6">
+        <app-incremento titulo="Incrementador" (actualizaValor)="porcentaje1 = $event" [porcentaje]=60></app-incremento>
+    </div>
+    <div class="col-6">
+        <app-incremento titulo="Incrementador" (actualizaValor)="porcentaje2 = $event" [porcentaje]=20></app-incremento>
+    </div>
+</div>
